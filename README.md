@@ -1,4 +1,4 @@
 EmailLib
 ========
 
-Email Lib is a .Net wrapper for sending Emails in an easy way.
+Email Lib is a Open Source .Net wrapper for sending Emails in an easy way.
