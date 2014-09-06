@@ -1,1 +1,13 @@
-// add code here
+Imports System.Net
+Imports System.Net.Mail
+Imports System.Runtime.InteropServices
+Public Class EmailLib
+
+    Public Shared Sub SendMail(ByVal SendEmail As String, ByVal SenderPassword As String, ByVal RecEmail As String, ByVal Subject As String, ByVal Body As String, ByVal Smtp As String, ByVal SSL As Boolean, ByVal Port As Integer)
+        Dim myClient As New Net.Mail.SmtpClient(Smtp, Port)
+        myClient.EnableSsl = SSL
+        myClient.Credentials = New NetworkCredential(SendEmail, SenderPassword)
+        myClient.Send(SendEmail, RecEmail, Subject, Body)
+    End Sub
+End Class
+
